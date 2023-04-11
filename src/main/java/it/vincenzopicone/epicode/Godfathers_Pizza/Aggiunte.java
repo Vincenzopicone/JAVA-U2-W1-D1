@@ -14,5 +14,6 @@ import java.util.ArrayList;
 @ToString
 public class Aggiunte extends Pizzeria{
 	private String nome;
-	private Long kcal;	
+	private Long kcal;
+	private Double prezzo;
 }

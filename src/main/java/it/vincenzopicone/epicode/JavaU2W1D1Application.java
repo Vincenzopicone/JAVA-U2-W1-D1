@@ -34,7 +34,8 @@ public class JavaU2W1D1Application {
 		P.setPrezzo(prezzo);
 		P.setAggiunte(addAggiunta());
 		ordine.add(P);
-		System.out.println("La pizza " + P.getNome() + " è stata aggiunta");	
+		System.out.println("La pizza " + P.getNome() + " " + P.getAggiunte().toString() + " è stata aggiunta" );
+		
 		
 		appContext.close();
 	}
@@ -68,13 +69,13 @@ public class JavaU2W1D1Application {
 	public static List<Aggiunte> addAggiunta() {
 		int scelta;
 		List <Aggiunte> ingredienti = new ArrayList<>();
-		Aggiunte A1 = new Aggiunte("Mozzarella", 25l);
+		Aggiunte A1 = new Aggiunte("Mozzarella", 25l, 0d);
 		ingredienti.add(A1);
-		Aggiunte A2 = new Aggiunte("Pomodoro", 251l);
+		Aggiunte A2 = new Aggiunte("Pomodoro", 251l, 0d);
 		ingredienti.add(A2);
 		System.out.println("Vuoi aggiungere l'ananas? 1 si - 2 doppio - 3 avanti - 0 nulla");
 		scelta = scanner.nextInt();
-		Aggiunte A3 = new Aggiunte("Ananas", 12l);
+		Aggiunte A3 = new Aggiunte("Ananas", 12l, 1.34d);
 		switch(scelta) {
 		case 1: 
 			ingredienti.add(A3);
@@ -85,7 +86,7 @@ public class JavaU2W1D1Application {
 			break;
 			default: System.exit(0);
 		}
-		Aggiunte A4 = new Aggiunte("Cotto", 25l);
+		Aggiunte A4 = new Aggiunte("Cotto", 25l, 1.60d);
 		System.out.println("Vuoi aggiungere il cotto? 1 si - 2 doppio - 3 avanti - 0 nulla");
 		scelta = scanner.nextInt();
 		switch(scelta) {
@@ -98,7 +99,7 @@ public class JavaU2W1D1Application {
 			break;
 			default: System.exit(0);
 		}
-		Aggiunte A5 = new Aggiunte("Crudo", 25l);
+		Aggiunte A5 = new Aggiunte("Crudo", 25l, 1.78d);
 		System.out.println("Vuoi aggiungere il crudo? 1 si - 2 doppio - 3 avanti - 0 nulla");
 		scelta = scanner.nextInt();
 		switch(scelta) {
@@ -115,7 +116,8 @@ public class JavaU2W1D1Application {
 	}
 	
 	public static Long calcolaCalorie () {
-	
+		Long totaleCalorie = null;
+		return totaleCalorie;
 	}
 	
 	public static Double calcolaScontrino() {
